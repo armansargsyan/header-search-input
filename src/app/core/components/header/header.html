@@ -1,0 +1,89 @@
+<header class="flex gap-6 px-4 justify-between items-center" >
+  <div class="flex gap-10 items-center grow lg:grow-[0] justify-between">
+    <button class="md:hidden">
+      <img src="/icons/menu.svg" alt="">
+    </button>
+    <a routerLink="/" aria-label="Tile.Expert — главная">
+      <img
+        src="/logos/tile-expert-logo.svg"
+        alt="Tile.Expert"
+      />
+    </a>
+
+    <nav aria-label="Основная навигация" class="text-white md:flex hidden">
+      <ul class="primary-navigation__list flex">
+        <li>
+          <a routerLink="/links" routerLinkActive="active">
+            <img src="/icons/link.svg" alt="Ссылки"/>
+            <span class="lg:block hidden">Ссылки</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/contacts" routerLinkActive="active">
+            <img src="/icons/contacts.svg" alt="Контакты"/>
+            <span class="lg:block hidden">Контакты</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/tags" routerLinkActive="active">
+            <img src="/icons/tag.svg" alt="Теги"/>
+            <span class="lg:block hidden">Теги</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/favorites" routerLinkActive="active">
+            <img src="/icons/favorites.svg" alt="Избранное"/>
+            <span class="lg:block hidden">Избранное</span>
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/visits" routerLinkActive="active">
+            <img src="/icons/history.svg" alt="Посещения"/>
+            <span class="lg:block hidden">Посещения</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="flex gap-6 items-center flex-row-reverse">
+      <app-search-panel/>
+
+      <a routerLink="/visits" routerLinkActive="active" class="md:hidden">
+        <img src="/icons/history.svg" alt="Посещения"/>
+      </a>
+
+      <button type="button" class="icon-button" aria-label="Добавить">
+        <img src="/icons/add.svg" alt="add"/>
+      </button>
+    </div>
+
+
+
+  </div>
+
+  <div class="flex items-center gap-6">
+
+    <button
+      type="button"
+      class="icon-button notification-button"
+      aria-label="Уведомления: 32 непрочитанных"
+    >
+      <img src="/icons/notifications.svg" alt="notifications"/>
+      <span>{{ notificationsCount() }}</span>
+    </button>
+
+    <button type="button" class="avatar-button" aria-label="Открыть профиль">
+      <img
+        [src]="profilePictureURL()"
+        width="32px"
+        height="32px"
+        class="rounded-full"
+        alt=""
+      />
+    </button>
+  </div>
+</header>

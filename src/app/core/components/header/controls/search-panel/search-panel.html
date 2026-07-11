@@ -1,0 +1,54 @@
+<div class="search-panel-container">
+  <button type="button" (click)="toggle()">
+    <img src="/icons/search.svg" alt=""/>
+  </button>
+  <form class="search-form" [formGroup]="searchForm" [class.is-opened]="isOpened()" (ngSubmit)="submitForm()">
+    <div class="search-text-wrapper">
+      <button type="button" class="md:hidden" (click)="toggle()">
+        <img src="/icons/arrow_back.svg" alt="<"/>
+      </button>
+
+      <input name="text" formControlName="text" placeholder="Поисковый запрос" (focusin)="isAdvancedSearchOpened.set(true)"/>
+      @if (isSearchButtonVisible()) {
+        <button type="submit" class="submit-button hidden md:block" [disabled]="searchForm.invalid || searchForm.pending">Найти</button>
+      }
+    </div>
+    <section class="advanced-search-panel" [class.is-opened]="isAdvancedSearchOpened()">
+      <div class="search-history">
+        <p class="label">История</p>
+        @if (mockDataService.getSearchHistory() | async; as searchHistory) {
+          <ul class="search-history-list">
+            @for(item of searchHistory; track item) {
+              <li (click)="useHistory(item)">{{ item }}</li>
+            }
+          </ul>
+        }
+      </div>
+      <div class="right-panel">
+        <label class="author-input">
+          <p class="label">Автор</p>
+          <input formControlName="author" name="author" placeholder="Имя или должность"/>
+          <button type="button" (click)="onMeButtonClick()">
+            <img src="/icons/me.svg" alt="me">
+          </button>
+        </label>
+
+        <div class="row mt-4">
+          <app-checkbox formControlName="participant" id="participant" ariaLabel="Я участник" label="Я участник"/>
+          <app-checkbox formControlName="strictSearch" id="strictSearch" ariaLabel="Строгий поиск" label="Строгий поиск"/>
+          <app-checkbox formControlName="titlesOnly" id="titlesOnly" ariaLabel="В заголовках" label="В заголовках"/>
+        </div>
+
+        <div class="mt-6" formGroupName="only">
+          <p>Только</p>
+          <div class="row mt-1">
+            <app-checkbox formControlName="tags" id="tags" ariaLabel="Теги" label="Теги"/>
+            <app-checkbox formControlName="requests" id="requests" ariaLabel="Просьбы" label="Просьбы"/>
+            <app-checkbox formControlName="contacts" id="contacts" ariaLabel="Контакты" label="Контакты"/>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </form>
+</div>
