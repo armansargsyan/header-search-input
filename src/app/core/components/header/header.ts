@@ -14,6 +14,6 @@ export class Header {
   private readonly userService = inject(UserMockDataService);
   protected readonly profilePictureURL = computed(() => {
     const userProfilePic = this.userService.user()?.profilePicUrl;
-    return userProfilePic ?? '/shared/default-AVA.jpg'
+    return userProfilePic ?? 'shared/default-AVA.jpg'
   });
 }

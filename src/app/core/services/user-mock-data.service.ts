@@ -10,6 +10,6 @@ export interface User {
 export class UserMockDataService {
   readonly user = signal<User>({
     name: "Arman Sargsyan",
-    profilePicUrl: '/shared/AVA.png'
+    profilePicUrl: 'shared/AVA.png'
   })
 }

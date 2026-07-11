@@ -1,11 +1,11 @@
 <div class="search-panel-container">
   <button type="button" (click)="toggle()">
-    <img src="/icons/search.svg" alt=""/>
+    <img src="icons/search.svg" alt=""/>
   </button>
   <form class="search-form" [formGroup]="searchForm" [class.is-opened]="isOpened()" (ngSubmit)="submitForm()">
     <div class="search-text-wrapper">
       <button type="button" class="md:hidden" (click)="toggle()">
-        <img src="/icons/arrow_back.svg" alt="<"/>
+        <img src="icons/arrow_back.svg" alt="<"/>
       </button>
 
       <input name="text" formControlName="text" placeholder="Поисковый запрос" (focusin)="isAdvancedSearchOpened.set(true)"/>
@@ -29,7 +29,7 @@
           <p class="label">Автор</p>
           <input formControlName="author" name="author" placeholder="Имя или должность"/>
           <button type="button" (click)="onMeButtonClick()">
-            <img src="/icons/me.svg" alt="me">
+            <img src="icons/me.svg" alt="me">
           </button>
         </label>
 
