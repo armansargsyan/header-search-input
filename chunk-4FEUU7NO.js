@@ -1,0 +1,1 @@
+import{Da as a,Xa as o,Ya as s,hb as i}from"./chunk-DIKELA2M.js";var n=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-favorites"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"p"),i(1,"favorites works!"),s())},encapsulation:2})};export{n as Favorites};

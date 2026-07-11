@@ -1,0 +1,1 @@
+import{Da as t,Xa as s,Ya as i,hb as a}from"./chunk-DIKELA2M.js";var o=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-links"]],decls:2,vars:0,template:function(e,l){e&1&&(s(0,"p"),a(1,"links works!"),i())},encapsulation:2})};export{o as Links};

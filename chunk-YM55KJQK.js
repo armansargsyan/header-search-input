@@ -1,0 +1,1 @@
+import{Da as s,Xa as i,Ya as n,hb as a}from"./chunk-DIKELA2M.js";var o=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=s({type:e,selectors:[["app-visits"]],decls:2,vars:0,template:function(t,m){t&1&&(i(0,"p"),a(1,"visits works!"),n())},encapsulation:2})};export{o as Visits};

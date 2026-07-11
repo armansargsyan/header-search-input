@@ -1,0 +1,1 @@
+import{Da as t,Xa as a,Ya as i,hb as o}from"./chunk-DIKELA2M.js";var s=class e{static \u0275fac=function(n){return new(n||e)};static \u0275cmp=t({type:e,selectors:[["app-landing"]],decls:2,vars:0,template:function(n,d){n&1&&(a(0,"p"),o(1,"landing works!"),i())},encapsulation:2})};export{s as Landing};

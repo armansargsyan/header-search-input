@@ -1,0 +1,1 @@
+import{Da as n,Xa as a,Ya as o,hb as s}from"./chunk-DIKELA2M.js";var c=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-contacts"]],decls:2,vars:0,template:function(t,p){t&1&&(a(0,"p"),s(1,"contacts works!"),o())},encapsulation:2})};export{c as Contacts};
